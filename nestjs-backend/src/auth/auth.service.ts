@@ -1,6 +1,9 @@
 // ** Nest Imports
 import { JwtService } from '@nestjs/jwt'
-import { BadRequestException, Injectable } from '@nestjs/common'
+import { BadRequestException, ForbiddenException, Injectable } from '@nestjs/common'
+
+// ** Express Imports
+import { Request, Response } from 'express'
 
 // ** Prisma Imports
 import { PrismaService } from 'prisma/prisma.service'
@@ -45,7 +48,7 @@ export class AuthService {
   }
 
   // ** Login
-  async login(dto: AuthDTO) {
+  async login(dto: AuthDTO, req: Request, res: Response) {
     // params
     const { email, password } = dto
 
@@ -65,8 +68,14 @@ export class AuthService {
 
     // If password is correct, sign in with JWT
     const token = await this.signToken({ id: user.id, email: user.email })
+    if (!token) {
+      throw new ForbiddenException()
+    }
 
-    return { message: 'Log In Successful', token }
+    // Set cookie in response header
+    res.cookie('token', token)
+
+    return res.send({ message: 'Log In Successful' })
   }
 
   // ** Logout
