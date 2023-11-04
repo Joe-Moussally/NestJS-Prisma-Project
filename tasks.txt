@@ -1,0 +1,23 @@
+Backend (NestJS - Prisma - PostgreSQL)
+    - Create Nest project
+    - Integrate Prisma
+    - Create Auth module with basic functionalities
+    - Initialize Prisma and connect it to the Auth module
+    - Implement JWT tokens
+    - Implement cookies
+    - Create User module
+
+NextJS:
+    - Create NextJS project
+    - Create useTheme hook
+    - Use axios for API instances
+    - Create useAuth hook
+    - Create core components: Button, Typography, Chip, Toast...
+    - Create Log In Page
+    - Create Sign Up Page
+    - Create Home Page
+    - Create Profile Page
+    - Handle Loading/Shimmer
+    - Create navigation
+    - Handle protected routes
+    - Create utils: debounce, capitalize...
