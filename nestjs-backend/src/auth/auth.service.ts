@@ -72,15 +72,14 @@ export class AuthService {
       throw new ForbiddenException()
     }
 
-    // Set cookie in response header
-    res.cookie('token', token)
+    res.cookie('token', token) // Set cookie in response
 
     return res.send({ message: 'Log in successful' })
   }
 
   // ** Logout
   async logout(req: Request, res: Response) {
-    res.clearCookie('token')
+    res.clearCookie('token') // clear cookie
     return res.send({ message: 'Log out successful' })
   }
 
