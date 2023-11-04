@@ -75,12 +75,13 @@ export class AuthService {
     // Set cookie in response header
     res.cookie('token', token)
 
-    return res.send({ message: 'Log In Successful' })
+    return res.send({ message: 'Log in successful' })
   }
 
   // ** Logout
-  async logout() {
-    return { message: 'Log Out Successful' }
+  async logout(req: Request, res: Response) {
+    res.clearCookie('token')
+    return res.send({ message: 'Log out successful' })
   }
 
   // Function to generate and sign a jwt token to the user
