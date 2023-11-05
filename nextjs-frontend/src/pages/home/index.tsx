@@ -6,13 +6,13 @@ import { useTheme } from '@/hooks/useTheme'
 
 // ** Component Imports
 import Hero from './Hero'
-import { categoryIcons } from '@/@core/constants/category-icons'
+import Categories from './Categories'
 
 function Home() {
   return (
     <div>
       <Hero />
-      {categoryIcons.map(el => el.icon())}
+      <Categories />
     </div>
   )
 }

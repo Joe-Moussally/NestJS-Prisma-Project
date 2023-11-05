@@ -13,6 +13,7 @@ import hero from '../../assets/hero.png'
 // ** Component Imports
 import SectionTitle from '@/@core/components/SectionTitle/SectionTitle'
 import Button from '@/@core/components/Button/Button'
+import Title from '@/@core/components/Title/Title'
 
 function Hero() {
   // ** Hooks
@@ -22,10 +23,10 @@ function Hero() {
       {/* Left Section */}
       <div className='flex flex-col items-start justify-center '>
         <SectionTitle label='- Healthy Products' />
-        <h1 className='text-5xl font-semibold mb-14 mt-5'>
+        <Title>
           We Offer The Best <br />
           Products For You.
-        </h1>
+        </Title>
         <Button label='Shop Now' />
       </div>
 
