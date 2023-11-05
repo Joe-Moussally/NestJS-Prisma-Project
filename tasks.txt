@@ -21,3 +21,7 @@ NextJS:
     - Create navigation
     - Handle protected routes
     - Create utils: debounce, capitalize...
+
+Commands:
+    - migration: npx prisma migrate dev --name init
+    - seeding: npx prisma db seed
