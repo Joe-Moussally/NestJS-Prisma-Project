@@ -9,10 +9,10 @@ export const lightTheme: Theme = {
     background: '#fff',
     text: '#1f1f1f',
     contrastText: '',
-    error: '',
-    success: '',
-    warning: '',
-    info: ''
+    error: '#f55858',
+    success: '#58f565',
+    warning: '#f5a758',
+    info: '#29a2ff'
   },
   spacing: {
     xs: '4px',
@@ -20,5 +20,9 @@ export const lightTheme: Theme = {
     md: '16px',
     lg: '24px',
     xl: '32px'
+  },
+  radius: {
+    sm: '8px',
+    bg: '16px'
   }
 }

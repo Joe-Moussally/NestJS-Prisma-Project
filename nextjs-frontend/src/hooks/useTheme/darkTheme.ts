@@ -7,12 +7,12 @@ export const darkTheme: Theme = {
     primary: '#00ff8c',
     secondary: '',
     background: '#111',
-    text: '#fff',
+    text: 'white',
     contrastText: '',
-    error: '',
-    success: '',
-    warning: '',
-    info: ''
+    error: '#f55858',
+    success: '#58f565',
+    warning: '#f5a758',
+    info: '#29a2ff'
   },
   spacing: {
     xs: '4px',
@@ -20,5 +20,9 @@ export const darkTheme: Theme = {
     md: '16px',
     lg: '24px',
     xl: '32px'
+  },
+  radius: {
+    sm: '8px',
+    bg: '16px'
   }
 }

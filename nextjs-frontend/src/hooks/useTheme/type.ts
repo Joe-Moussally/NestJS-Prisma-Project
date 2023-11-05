@@ -18,4 +18,8 @@ export type Theme = {
     lg: string
     xl: string
   }
+  radius: {
+    sm: string
+    bg: string
+  }
 }
