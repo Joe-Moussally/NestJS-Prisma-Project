@@ -4,11 +4,11 @@ import { Theme } from '.'
 export const darkTheme: Theme = {
   mode: 'dark',
   palette: {
-    primary: '#00ff8c',
+    primary: '#17ffaa',
     secondary: '',
-    background: '#111',
+    background: '#424242',
     text: 'white',
-    contrastText: '',
+    contrastText: '#1f1f1f',
     error: '#f55858',
     success: '#58f565',
     warning: '#f5a758',

@@ -14,8 +14,8 @@ function Button({ label = '', loading = false, variant = 'solid', ...rest }: But
   return (
     <button
       {...rest}
-      className={`px-[${theme.spacing.lg}] bg-[${theme.palette.primary}]`}
-      //   style={{ backgroundColor: theme.palette.primary, color: 'white' }}
+      style={{ backgroundColor: theme.palette.primary, color: 'white', letterSpacing: 1, ...rest.style }}
+      className='px-6 py-3 font-bold text-xl rounded-full'
     >
       {label}
     </button>

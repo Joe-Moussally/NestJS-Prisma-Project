@@ -10,8 +10,7 @@ export default function Home() {
   const theme = useTheme()
 
   return (
-    <main className={`${outfit.className}`} style={{ color: theme.palette.text, background: theme.palette.background }}>
-      Home {theme.palette.text}
+    <main className={`${outfit.className}`}>
       <button onClick={() => theme.toggleTheme()}>Change theme</button>
     </main>
   )
