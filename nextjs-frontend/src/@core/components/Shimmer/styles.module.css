@@ -1,0 +1,25 @@
+/* styles.css */
+.shimmerWrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(152, 152, 152, 0.1);
+}
+
+.shimmerAnimation {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 10%, rgba(152, 152, 152, 0.2) 50%, transparent 90%);
+  animation: shimmer 2.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
