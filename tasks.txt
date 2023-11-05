@@ -9,6 +9,7 @@ Backend (NestJS - Prisma - PostgreSQL)
 
 NextJS:
     - Create NextJS project
+    - Create color palette
     - Create useTheme hook
     - Use axios for API instances
     - Create useAuth hook
