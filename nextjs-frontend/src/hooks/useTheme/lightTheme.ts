@@ -4,9 +4,9 @@ import { Theme } from '.'
 export const lightTheme: Theme = {
   mode: 'light',
   palette: {
-    primary: '#17ffaa',
+    primary: '#20d492',
     secondary: '',
-    background: '#f5f5f5',
+    background: '#f2f6fa',
     text: '#1f1f1f',
     contrastText: 'white',
     error: '#f55858',

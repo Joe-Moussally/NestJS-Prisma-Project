@@ -15,12 +15,17 @@ const outfit = Outfit({ subsets: ['latin'] })
 import { store } from '@/redux/store'
 import { Provider } from 'react-redux'
 
+// ** Custom Component Imports
+import Header from '@/components/Header'
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <span>Header here</span>
-      <div className={`${outfit.className}`}>
-        <Component {...pageProps} />
+      <div className={`${outfit.className} border-red-200  flex`}>
+        <div className='w-[80vw] ml-auto mr-auto max-w-[1100px] md:w-[95vw]'>
+          <Header />
+          <Component {...pageProps} />
+        </div>
       </div>
     </Provider>
   )

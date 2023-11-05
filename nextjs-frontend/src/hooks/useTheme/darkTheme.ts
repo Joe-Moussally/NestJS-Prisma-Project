@@ -4,9 +4,9 @@ import { Theme } from '.'
 export const darkTheme: Theme = {
   mode: 'dark',
   palette: {
-    primary: '#17ffaa',
+    primary: '#20d492',
     secondary: '',
-    background: '#424242',
+    background: '#1c1c1c',
     text: 'white',
     contrastText: '#1f1f1f',
     error: '#f55858',
