@@ -22,8 +22,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <div className={`${outfit.className} border-red-200  flex`}>
-        <div className='w-[80vw] ml-auto mr-auto max-w-[1100px] md:w-[95vw]'>
-          <Header />
+        <Header />
+        <div className='w-[80vw] ml-auto mr-auto max-w-[1100px] md:w-[95vw] pt-[140px]'>
           <Component {...pageProps} />
         </div>
       </div>

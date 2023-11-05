@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { categoryIcons } from '@/@core/constants/category-icons'
 
 // ** Component Imports
+import Shimmer from '@/@core/components/Shimmer'
 import Title from '@/@core/components/Title/Title'
 import CategoryButton from '@/components/CategoryButton/CategoryButton'
 import SectionTitle from '@/@core/components/SectionTitle/SectionTitle'
@@ -28,24 +29,37 @@ function Categories() {
       .finally(() => setLoading(false)) // Stop loading
   }
 
+  const renderShimmer = () => (
+    <div className='flex flex-wrap  gap-5'>
+      <Shimmer height='120px' width='120px' borderRadius='12px' />
+      <Shimmer height='120px' width='120px' borderRadius='12px' />
+      <Shimmer height='120px' width='120px' borderRadius='12px' />
+      <Shimmer height='120px' width='120px' borderRadius='12px' />
+    </div>
+  )
+
   useEffect(() => {
     fetchCategories()
   }, [])
 
   return (
-    <div>
+    <div className='mb-40'>
       <SectionTitle label='- The Categories' />
       <Title>Browse by Category</Title>
-      <div className='flex flex-wrap  gap-5'>
-        {data &&
-          data.map(category => (
-            <CategoryButton
-              key={category.name}
-              label={category.name}
-              icon={categoryIcons.find(el => el.name === category.name)?.icon()}
-            />
-          ))}
-      </div>
+      {loading ? (
+        renderShimmer()
+      ) : (
+        <div className='flex flex-wrap  gap-5'>
+          {data &&
+            data.map(category => (
+              <CategoryButton
+                key={category.name}
+                label={category.name}
+                icon={categoryIcons.find(el => el.name === category.name)?.icon()}
+              />
+            ))}
+        </div>
+      )}
     </div>
   )
 }

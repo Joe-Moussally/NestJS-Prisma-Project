@@ -9,14 +9,26 @@ import { PrismaService } from 'prisma/prisma.service'
 
 // ** DTO Imports
 import { ProductDTO } from './dto/product.dto'
+import { PaginationDTO } from './dto/pagination.dto'
 
 @Injectable()
 export class ProductsService {
   constructor(private prisma: PrismaService) {}
 
   // ** Get all products
-  async getProducts() {
-    return await this.prisma.product.findMany()
+  async getProducts(dto: PaginationDTO) {
+    const { page, limit } = dto
+    // If no pagination param is defined -> return all
+    if (!page || !limit) {
+      return await this.prisma.product.findMany()
+    }
+
+    // Else -> paginate
+    const skip = (page - 1) * limit // Calculate the rows to skip/offset
+    return await this.prisma.product.findMany({
+      skip,
+      take: limit
+    })
   }
 
   // ** Get product

@@ -15,7 +15,7 @@ function Header() {
   // ** Hooks
   const theme = useTheme()
   return (
-    <div className='py-10 flex items-center justify-between'>
+    <div className='py-10 px-5 flex items-center justify-between fixed w-[100%] backdrop-blur-sm'>
       {/* Brand */}
       <div className='font-bold text-4xl flex' style={{ color: theme.palette.primary }}>
         <FaPumpSoap /> <span>Hygene</span>

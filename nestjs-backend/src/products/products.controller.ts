@@ -6,6 +6,7 @@ import { ProductsService } from './products.service'
 
 // ** DTO Imports
 import { ProductDTO } from './dto/product.dto'
+import { PaginationDTO } from './dto/pagination.dto'
 
 @Controller('products')
 export class ProductsController {
@@ -13,8 +14,8 @@ export class ProductsController {
 
   // Get all products
   @Get()
-  getProducts() {
-    return this.productsService.getProducts()
+  getProducts(@Body() dto: PaginationDTO) {
+    return this.productsService.getProducts(dto)
   }
 
   // Get product
