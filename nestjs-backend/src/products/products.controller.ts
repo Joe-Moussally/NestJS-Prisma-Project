@@ -1,5 +1,5 @@
 // ** Nest Imoprts
-import { Body, Controller, Get, Param, Post, Req, Res } from '@nestjs/common'
+import { Body, Controller, Get, Param, Post, Query, Req, Res } from '@nestjs/common'
 
 // ** Service Imports
 import { ProductsService } from './products.service'
@@ -14,8 +14,8 @@ export class ProductsController {
 
   // Get all products
   @Get()
-  getProducts(@Body() dto: PaginationDTO) {
-    return this.productsService.getProducts(dto)
+  getProducts(@Query('page') page: number, @Query('limit') limit: number) {
+    return this.productsService.getProducts(page, limit)
   }
 
   // Get product

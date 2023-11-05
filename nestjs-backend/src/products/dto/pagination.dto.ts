@@ -1,12 +1,12 @@
 // ** Validation Imports
-import { IsNotEmpty } from 'class-validator'
+import { IsNotEmpty, IsNumber } from 'class-validator'
 
 export class PaginationDTO {
   // ** page
-  @IsNotEmpty()
+  @IsNumber()
   public page: number
 
   // ** limit
-  @IsNotEmpty()
+  @IsNumber()
   public limit: number
 }

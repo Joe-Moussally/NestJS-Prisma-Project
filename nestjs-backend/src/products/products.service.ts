@@ -16,8 +16,7 @@ export class ProductsService {
   constructor(private prisma: PrismaService) {}
 
   // ** Get all products
-  async getProducts(dto: PaginationDTO) {
-    const { page, limit } = dto
+  async getProducts(page: number, limit: number) {
     // If no pagination param is defined -> return all
     if (!page || !limit) {
       return await this.prisma.product.findMany()
@@ -27,7 +26,7 @@ export class ProductsService {
     const skip = (page - 1) * limit // Calculate the rows to skip/offset
     return await this.prisma.product.findMany({
       skip,
-      take: limit
+      take: Number(limit)
     })
   }
 
