@@ -11,15 +11,15 @@ import Image from 'next/image'
 import hero from '../../assets/hero.png'
 
 // ** Component Imports
-import SectionTitle from '@/@core/components/SectionTitle/SectionTitle'
-import Button from '@/@core/components/Button/Button'
 import Title from '@/@core/components/Title/Title'
+import Button from '@/@core/components/Button/Button'
+import SectionTitle from '@/@core/components/SectionTitle/SectionTitle'
 
 function Hero() {
   // ** Hooks
   const theme = useTheme()
   return (
-    <div style={{ backgroundColor: theme.palette.background }} className='p-16 rounded-3xl flex justify-between'>
+    <div style={{ backgroundColor: theme.palette.background }} className='p-16 rounded-3xl flex justify-between mb-40'>
       {/* Left Section */}
       <div className='flex flex-col items-start justify-center '>
         <SectionTitle label='- Healthy Products' />
