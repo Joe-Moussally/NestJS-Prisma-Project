@@ -1,5 +1,5 @@
 // ** React Imports
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // ** Hook Imports
 import { useTheme } from '@/hooks/useTheme'
@@ -13,10 +13,16 @@ import hero from '../../assets/hero.png'
 // ** Component Imports
 import SectionTitle from '@/@core/components/SectionTitle/SectionTitle'
 import Button from '@/@core/components/Button/Button'
+import { NEST_API } from '@/@core/utils/api'
 
 function Hero() {
   // ** Hooks
   const theme = useTheme()
+
+  useEffect(() => {
+    NEST_API.get('/categories')
+  }, [])
+
   return (
     <div style={{ backgroundColor: theme.palette.background }} className='p-16 rounded-3xl flex justify-between'>
       {/* Left Section */}
