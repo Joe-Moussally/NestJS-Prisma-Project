@@ -10,7 +10,7 @@ CREATE TABLE "User" (
 
 -- CreateTable
 CREATE TABLE "Product" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "description" TEXT NOT NULL,
     "price" DECIMAL(65,30) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE "Product" (
 
 -- CreateTable
 CREATE TABLE "Category" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
 
     CONSTRAINT "Category_pkey" PRIMARY KEY ("id")
@@ -29,8 +29,8 @@ CREATE TABLE "Category" (
 
 -- CreateTable
 CREATE TABLE "_CategoryToProduct" (
-    "A" INTEGER NOT NULL,
-    "B" INTEGER NOT NULL
+    "A" TEXT NOT NULL,
+    "B" TEXT NOT NULL
 );
 
 -- CreateIndex
