@@ -22,7 +22,7 @@ function Header() {
       </div>
 
       {/* Header Actions */}
-      <div>
+      <div className='flex'>
         <Button
           iconButton
           icon={theme.mode === 'light' ? <FiMoon size={26} /> : <FiSun size={26} />}

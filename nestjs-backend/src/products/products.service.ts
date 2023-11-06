@@ -26,7 +26,10 @@ export class ProductsService {
     const skip = (page - 1) * limit // Calculate the rows to skip/offset
     return await this.prisma.product.findMany({
       skip,
-      take: Number(limit)
+      take: Number(limit),
+      include: {
+        categories: true
+      }
     })
   }
 

@@ -27,7 +27,7 @@ function Button({
         letterSpacing: 0.5,
         ...rest.style
       }}
-      className='px-6 py-3 font-semibold text-xl rounded-full'
+      className='px-6 py-3 font-semibold text-xl rounded-full flex items-center gap-3'
     >
       {icon}
       {label}
